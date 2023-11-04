@@ -1,8 +1,6 @@
 from flask import jsonify
 from werkzeug.exceptions import HTTPException
 
-from config import app
-
 
 class ApiException(HTTPException):
     def __init__(self, message, status_code=400, payload=None):

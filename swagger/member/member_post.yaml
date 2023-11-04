@@ -1,0 +1,33 @@
+summary: "Create member"
+description: "Create a new member in a group"
+tags: ["Member"]
+parameters:
+  - name: "group_id"
+    in: "path"
+    description: "ID of the group"
+    required: true
+    type: "integer"
+  - in: "body"
+    name: "body"
+    required: true
+    schema:
+      $ref: "#/definitions/Member"
+responses:
+  200:
+    description: "Member created successfully"
+  404:
+    description: "Group not found"
+
+definitions:
+  Member:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        example: "cuonghv"
+      is_host:
+        type: "boolean"
+        example: false
+      is_active_member:
+        type: "boolean"
+        example: true

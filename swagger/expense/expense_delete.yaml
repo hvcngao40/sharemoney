@@ -1,0 +1,14 @@
+summary: "Delete an expense"
+description: "Delete an existing expense"
+tags: ['Expense']
+parameters:
+  - name: "expense_id"
+    in: "path"
+    description: "ID of the expense"
+    required: true
+    type: "integer"
+responses:
+  200:
+    description: "Expense deleted successfully"
+  404:
+    description: "Expense not found"

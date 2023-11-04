@@ -1,0 +1,24 @@
+summary: "Update member"
+description: "Update an existing member in a group"
+tags: ["Member"]
+parameters:
+  - name: "group_id"
+    in: "path"
+    description: "ID of the group"
+    required: true
+    type: "integer"
+  - name: "member_id"
+    in: "path"
+    description: "ID of the member"
+    required: true
+    type: "integer"
+  - in: "body"
+    name: "body"
+    required: true
+    schema:
+      $ref: "#/definitions/Member"
+responses:
+  200:
+    description: "Member updated successfully"
+  404:
+    description: "Group or member not found"

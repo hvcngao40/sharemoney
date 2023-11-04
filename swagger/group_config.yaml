@@ -1,0 +1,56 @@
+get:
+  summary: "Get a group by ID"
+  parameters:
+    - name: "group_id"
+      in: "path"
+      required: true
+      type: "integer"
+  responses:
+    "200":
+      description: "OK"
+    "404":
+      description: "Group not found"
+
+put:
+  summary: "Update a group by ID"
+  parameters:
+    - name: "group_id"
+      in: "path"
+      required: true
+      type: "integer"
+    - in: "body"
+      name: "body"
+      required: true
+      schema:
+        $ref: "#/definitions/body_1"
+  responses:
+    "200":
+      description: "OK"
+    "404":
+      description: "Group not found"
+
+delete:
+  summary: "Delete a group by ID"
+  parameters:
+    - name: "group_id"
+      in: "path"
+      required: true
+      type: "integer"
+  responses:
+    "200":
+      description: "OK"
+    "404":
+      description: "Group not found"
+
+definitions:
+  body_1:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      group_type:
+        type: "string"
+      currency:
+        type: "string"
+      link:
+        type: "string"

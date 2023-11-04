@@ -1,0 +1,55 @@
+summary: "Create an expense"
+description: "Create a new expense in a group"
+tags: ['Expense']
+parameters:
+  - name: "group_id"
+    in: "path"
+    description: "ID of the group"
+    required: true
+    type: "integer"
+  - in: "body"
+    name: "body"
+    required: true
+    schema:
+      $ref: "#/definitions/ExpenseInput"
+responses:
+  201:
+    description: "Expense created successfully"
+  404:
+    description: "Group not found"
+
+definitions:
+  ExpenseInput:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        example: "ăn tối"
+      date:
+        type: "string"
+        example: "2023-11-03 00:00:00"
+      count:
+        type: "integer"
+        example: 100000
+      created_by:
+        type: "integer"
+        example: 1
+      updated_by:
+        type: "integer"
+        example: 1
+      spent_by:
+        type: "integer"
+        example: 1
+      split_type:
+        type: "string"
+        example: "default"
+      join_members:
+        type: "array"
+        items:
+          type: "integer"
+          example: 1
+      coefficient:
+        type: "object"
+        example: {"1": 2}
+        additionalProperties:
+          type: "number"

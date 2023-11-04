@@ -1,0 +1,19 @@
+summary: "Get an expense"
+description: "Retrieve an expense in a group"
+tags: ['Expense']
+parameters:
+  - name: "group_id"
+    in: "path"
+    description: "ID of the group"
+    required: true
+    type: "integer"
+  - name: "expense_id"
+    in: "path"
+    description: "ID of the expense"
+    required: true
+    type: "integer"
+responses:
+  200:
+    description: "OK"
+  404:
+    description: "Group or expense not found"

@@ -1,0 +1,13 @@
+summary: "Get a group by ID"
+tags: ["Group"]
+parameters:
+  - name: "group_id"
+    in: "path"
+    required: true
+    type: "integer"
+    example: 1
+responses:
+  "200":
+    description: "OK"
+  "404":
+    description: "Group not found"

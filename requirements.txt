@@ -1,0 +1,11 @@
+certifi==2023.7.22
+flasgger==0.9.7.1
+Flask==3.0.0
+Flask-Migrate==4.0.5
+Flask-RESTful==0.3.10
+Flask-SQLAlchemy==3.1.1
+psycopg2==2.9.9
+PyYAML==6.0.1
+requests==2.31.0
+SQLAlchemy==2.0.23
+werkzeug==3.0.1

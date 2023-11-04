@@ -1,0 +1,28 @@
+summary: "Create a new group"
+tags: ["Group"]
+parameters:
+  - in: "body"
+    name: "body"
+    required: true
+    schema:
+      $ref: "#/definitions/GroupInput"
+responses:
+  "200":
+    description: "OK"
+
+definitions:
+  GroupInput:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        example: "Nhà trọ"
+      group_type:
+        type: "string"
+        example: "bill"
+      currency:
+        type: "string"
+        example: "VND"
+      link:
+        type: "string"
+        example: "http://sharemoney.com/ieur93"

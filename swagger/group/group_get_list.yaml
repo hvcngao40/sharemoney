@@ -1,0 +1,6 @@
+summary: "Get all groups"
+parameters: [ ]
+tags: ["Group"]
+responses:
+  "200":
+    description: "OK"
